@@ -1,4 +1,3 @@
-// import { createTheme } from '@mui/material/styles'
 import { red } from '@mui/material/colors'
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 
@@ -75,22 +74,34 @@ export const colorLight = {
 }
 // Create a theme instance.
 const theme = extendTheme({
+  trello: {
+    appBarHeight: '48px',
+    boardBarHeight: '58px'
+  },
   colorSchemes: {
     light: {
       palette: {
         primary: {
-          main: colorLight.primary[500]
+          main: colorLight.primary[500],
+          light: colorLight.primary[300],
+          dark: colorLight.primary[800]
         },
         secondary: {
           main: colorLight.secondary[500]
         },
-        error: {
-          main: red.A400
-        },
-        text: {
-          secondary: red[500]
+        background: {
+          main: colorOn.grey[500],
+          light: colorOn.grey[0],
+          dark: colorOn.grey[1000]
         }
+      },
+      error: {
+        main: red.A400
+      },
+      text: {
+        secondary: red[500]
       }
+      // spacing: (factor) => `${0.25 * factor}rem`
     },
     dark: {
       palette: {
@@ -98,9 +109,34 @@ const theme = extendTheme({
           main: colorDark.primary[700]
         },
         secondary: {
-          main: '#FFC107'
+          main: colorDark.secondary[500]
         }
       }
+      // spacing: (factor) => `${0.25 * factor}rem`
+    }
+  },
+  error: {
+    main: red.A400
+  },
+  typography: {
+    fontSize: 12,
+    h1: {
+      fontSize: 40
+    },
+    h2: {
+      fontSize: 32
+    },
+    h3: {
+      fontSize: 24
+    },
+    h4: {
+      fontSize: 20
+    },
+    h5: {
+      fontSize: 16
+    },
+    h6: {
+      fontSize: 14
     }
   }
 })
