@@ -1,1 +1,2 @@
 // Boards list
+const a;
