@@ -1,5 +1,4 @@
-import Board from './pages/Boards/_id'
-// import theme from './theme'
+import Board from '~/pages/Boards/_id'
 
 function App() {
   return (

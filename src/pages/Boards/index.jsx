@@ -1,2 +1,1 @@
 // Boards list
-const a;
